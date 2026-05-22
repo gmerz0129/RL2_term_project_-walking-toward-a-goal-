@@ -31,9 +31,8 @@
         <geom condim="3" friction="1 .1 .1" material="MatPlane" name="floor"
               pos="0 0 0" rgba="0.8 0.9 0.8 1" size="20 20 0.125" type="plane"/>
 
-        <!-- ============================
-             사각형 경기장 + start/goal
-             ============================ -->
+        
+           <-- ============================ -->
         <!-- 사각형 경기장 + start / goal -->
         <body name="arena">
             <!-- 아래쪽 벽 (y = -3) -->
