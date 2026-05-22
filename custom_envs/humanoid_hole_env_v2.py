@@ -7,7 +7,7 @@ class HumanoidHoleEnv_v2(HumanoidEnv):
     """
     HumanoidHole-v0 환경
 
-    - Gymnasium 기본 Humanoid-v5 환경 로직을 그대로 사용
+    - Gymnasium 기본 Humanoid-v5 환경 로직을 그대로 사용하면서..!
     - MuJoCo 모델(xml_file)만 커스텀 humanoid_hole.xml로 교체
     """
 
