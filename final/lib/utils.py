@@ -1,11 +1,11 @@
 import argparse
 import sys
 from pathlib import Path
-
+import torch
 import cv2
 import gymnasium as gym
 import numpy as np
-import torch
+
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.append(str(PROJECT_ROOT))
@@ -17,7 +17,7 @@ from lib.wrappers import GoalRewardWrapper, StandingResetWrapper
 def parse_args_ppo() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     
-    # Device & Env
+    # Device & Environment
     parser.add_argument("--cuda", action="store_true", default=True, help="Use CUDA")
     parser.add_argument("--env", default="HumanoidHole-v0", help="Environment ID")
     parser.add_argument("--n-envs", type=int, default=16, help="Parallel environments")
@@ -36,7 +36,7 @@ def parse_args_ppo() -> argparse.Namespace:
     parser.add_argument("--target-kl", type=float, default=0.05, help="Target KL (Early Stopping)")
     parser.add_argument("--reward-scale", type=float, default=0.01, help="Reward scaling")
     
-    # Goal Params
+    # Goal Parameters
     parser.add_argument("--goal-x", type=float, default=7.5, help="Goal X")
     parser.add_argument("--goal-y", type=float, default=2.5, help="Goal Y")
     parser.add_argument("--goal-radius", type=float, default=0.7, help="Goal radius")
