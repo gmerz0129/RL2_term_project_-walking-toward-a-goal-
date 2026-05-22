@@ -16,7 +16,7 @@
 
 ##  환경 시각화
 
-![맵 환경](./img/Environment.png)
+![맵 환경](./img/environment_map.png)
 
 ##  실행 방법
 
