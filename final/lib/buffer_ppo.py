@@ -26,7 +26,7 @@ class PPOBuffer:
         self.trunc_buf = torch.zeros((size, num_envs), dtype=torch.float32, device=device)
         self.logprob_buf = torch.zeros((size, num_envs), dtype=torch.float32, device=device)
         
-        self.ptr = 0
+        self.ptr = 0.0
     
     def store(self, obs, act, rew, val, term, trunc, logprob):
         self.obs_buf[self.ptr] = obs
