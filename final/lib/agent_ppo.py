@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from torch.distributions import Normal
 
-# https://github.com/ProfessorNova/PPO-Humanoid
+
 class PPOAgent(nn.Module):
 
     def __init__(self, num_inputs: int, num_actions: int, hidden_size: int = 512):
@@ -35,7 +35,7 @@ class PPOAgent(nn.Module):
         
         self._init_weights()
     
-    # 가중치 초기화
+    # weight initialization
     def _init_weights(self):
         for module in self.modules():
             if isinstance(module, nn.Linear):
