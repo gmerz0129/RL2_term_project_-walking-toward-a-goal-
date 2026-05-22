@@ -1,13 +1,12 @@
 from dataclasses import asdict, dataclass
 from typing import Tuple
-
 import gymnasium as gym
 import numpy as np
 import mujoco
 
 @dataclass
 class RewardTerms:
-    # 보상 구성 요소를 저장하는 데이터 클래스.
+    # 보상 구성 요소를 저장하는 data class.
     base: float = 0.0
     progress: float = 0.0
     velocity: float = 0.0
